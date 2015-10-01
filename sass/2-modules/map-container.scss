@@ -1,0 +1,67 @@
+.map-container {
+	@include transition(all 1200ms $defaultEasing);
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	
+	position: relative;
+	margin: 14 px;
+
+	
+	.map {
+		@include transition(all 1200ms $defaultEasing);
+		flex-grow: 1;
+		box-shadow: 0px 0px 5px 1px rgba(0,0,0,1);
+		
+		.leaflet-bar {
+			box-shadow: 0 0 0 0 black;
+
+			a {
+				background-color: rgba(0,0,0,0.5);
+				display: block;
+				color: white;
+				border-radius: 50%;
+				margin-bottom: 3px;
+				border-bottom-width: 0px;
+				&:hover {
+					box-shadow: 0px 0px 10px 0px black;
+					background-color: rgba(0,0,0,0.7);
+					color: white;
+					opacity: 1;
+				}
+	
+			}
+		}
+		
+	}
+	
+	.results-container {
+		@include transition(all 1200ms $defaultEasing);
+		
+		height: 0px;
+		
+		background-color: white;
+		z-index: 10000; 
+		overflow: auto;
+		
+		&.is-open {
+			margin-top: 14px;
+			height: 300px;
+			box-shadow: 0px 0px 5px 1px rgba(0,0,0,1);
+			
+			.resize-handle-y {
+				display:block;
+			}
+		}
+	}
+	
+	
+	
+}
+
+.resize-handle-y {
+	padding: 0;
+	margin: 0;
+	cursor: n-resize;
+	display: none;
+}

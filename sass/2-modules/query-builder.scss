@@ -1,0 +1,84 @@
+.query-builder {
+	
+	select {
+		background: none;
+		border: none;
+		
+		-moz-appearance: none;
+		-webkit-appearance: none;
+    	text-indent: 0.01px;
+    	text-overflow: '';
+		text-align: center;
+		border-bottom: 1px blue dotted;
+		cursor: pointer;
+		outline: none;
+		width: auto;
+		max-width: auto;
+		
+		option {
+			padding: 30px;
+		}
+	}
+	
+	.form-section {
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+		
+		.form-section--head {
+			
+			display: inline;
+			padding: 20px 30px;
+			font-size: 1.5em;
+			text-align: center;
+			
+
+		}
+	}
+	
+	.filter-single {
+		
+		display: flex;
+		flex-direction: column;
+		
+	
+		input[type="text"] {
+			display: block;
+			width: 100%;
+			border: none;
+			border-bottom: blue 1px dotted;
+			background: none;		
+			outline: none;	
+			padding-left: 4px;
+		}
+	}
+	
+	.filter .filter-group {
+		margin-left: 15px;
+	}
+	
+	.filter-group {
+		
+		border-left: 1px solid blue;
+		padding-left: 5px;
+		
+		.filter:nth-child(1) {
+			
+			.grouping-option {
+				display: none;
+			}
+			
+			
+		}
+		
+		a {
+			display: block;
+			text-decoration: none;
+			
+		}
+		
+	}
+	
+	
+	
+}

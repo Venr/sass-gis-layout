@@ -1,0 +1,79 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	font-family: $defaultFont;	
+	font-size: $defaultFontSize;
+	
+	background: url(/images/linen-medium.png) repeat;
+	//background: url(/images/backgroundDefault.jpg) repeat;
+	
+	// background:
+	// radial-gradient(black 15%, transparent 16%) 0 0,
+	// radial-gradient(black 15%, transparent 16%) 8px 8px,
+	// radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+	// radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+	// background-color:#555555;
+	// background-size:16px 16px;	
+}
+
+.layout-container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	
+	.header-container {
+		position: relative;
+		top: 0;
+		left: 0;
+		right: 0;
+		
+		height: 50px;
+		@include linear-gradient(50deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+		box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.4);
+		z-index: 10000;
+	}
+	
+	.app-container {
+		display: flex;
+		flex-grow: 1;
+		position: relative;
+	}
+	
+	.footer-container {
+		
+		height: 40px;
+	}
+	
+}
+
+.footer-container {
+	position: relative;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+    justify-content: center;
+	text-align: center;
+	background-color: white;
+	box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.4);
+	z-index: 10000;
+	.left {
+		width: 45px;
+		background-image: url('http://www2.dot.state.fl.us/images/oislogo_sm.jpg');
+		background-size: contain;
+		height: 30px;
+		
+		margin-left: 10px;
+	}
+	
+	.right {
+		width: 200px;
+	}
+	
+	.center {
+		margin-left: -10px;
+		flex-grow: 1;
+	}
+}

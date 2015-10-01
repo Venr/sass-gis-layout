@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="bower_components/leaflet/dist/leaflet.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<title>Document</title>
+</head>
+<body class="layout-container" ng-app="sample">
+	
+	<div class="header-container">			
+		
+	</div>
+	
+	<div class="app-container">
+
+		<div class="tool-surface">
+			<div class="tool-content">
+				<div class="tool-header">
+					Tool Header
+				</div>
+				<div class="tool-body">
+					
+					<div class="query-builder">
+						<div class="query-subject form-section">
+							<div class="form-section--head">Find</div>
+							<select>
+								<option>Fatalities</option>
+								<option>Projects</option>
+							</select>
+						</div>
+						<div class="form-section">
+							<div class="form-section--head">Filter</div>
+
+							<select>
+									<option value="0">return all records</option>
+									<option value="1" selected>where</option>
+							</select>	
+							
+							<div class="query-attrfilter" ng-controller="AttributeFilterController as ctrl">
+								<filter-group filter="ctrl.rootGroup"></filter-group>		
+								
+								
+								<div>
+									
+										{{ ctrl.rootGroup.getFilter() }}
+									
+								</div>				
+							</div>
+						</div>
+						<div class="query-geofilter form-section">
+							<div class="form-section--head">Locate</div>
+							<select>
+								<option value="0">within the current map view</option>
+								<option value="1">related to geometry</option>
+								<option value="1">located anywhere</option>
+							</select>							
+						</div>
+						
+					</div>
+					
+					<div style="display:none;">Velit eu ullamcorper phasellus magnis gravida mi nec ultrices leo cum eu aliquet mus class lobortis vestibulum lacinia sed eu mattis. Nec laoreet in sem aptent velit adipiscing aliquam curabitur a ante suspendisse a vivamus vitae adipiscing a orci. Nec donec ante mi class fermentum potenti praesent a a nostra semper scelerisque scelerisque nunc nascetur felis est elit ullamcorper fusce at eget justo. 
+		
+					Nullam potenti parturient turpis condimentum vehicula consequat posuere parturient per scelerisque vitae ullamcorper vitae nullam ad id laoreet vestibulum et a duis. Suscipit consectetur odio ac eu hac leo pretium facilisi viverra a venenatis condimentum platea et a amet ad condimentum lobortis consectetur vitae cras ante a arcu ac eu. Vestibulum tincidunt tincidunt magnis blandit platea pharetra sed suspendisse condimentum habitasse phasellus adipiscing sem condimentum fusce lacinia congue venenatis orci himenaeos tempus at. Odio eu tristique sodales ullamcorper aliquet vestibulum dolor adipiscing vulputate a pharetra class nostra quam convallis felis nam. Pharetra mus vestibulum a curabitur est a suspendisse vestibulum nascetur eu imperdiet in gravida a a ligula a eu a vestibulum a. Tristique dictumst fringilla auctor nullam adipiscing viverra facilisi nibh curae dis a nibh parturient et facilisi vestibulum tortor a quis faucibus imperdiet euismod magnis lacus. 
+					
+					Vestibulum malesuada ut egestas ultrices cras cubilia parturient vulputate risus eget adipiscing ultricies dui dapibus metus sem enim. Curabitur mauris torquent lacinia tincidunt sapien a imperdiet ligula pretium mi adipiscing placerat varius potenti. Mauris convallis parturient phasellus justo facilisi scelerisque hac tortor aliquet torquent rutrum imperdiet vestibulum a vitae sit phasellus class parturient dis sed viverra a adipiscing pretium morbi. A tempor sociis parturient a enim scelerisque sem accumsan adipiscing ullamcorper parturient vestibulum a phasellus a ad vivamus curabitur parturient aptent ad. Lacus quam a magna ad a a adipiscing facilisis scelerisque tempor parturient nibh cursus vestibulum a nullam cubilia a.</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class='map-container'>
+			
+			<div class="toolbar">
+				<a href="" class="tool-trigger"><i class="fa fa-camera-retro fa-lg"></i></a>
+				<a href="" class="tool-trigger"><i class="fa fa-camera-retro fa-lg"></i></a>
+				<a href="" class="tool-trigger"><i class="fa fa-camera-retro fa-lg"></i></a>
+				<a href="" class="tool-trigger"><i class="fa fa-camera-retro fa-lg"></i></a>
+				<a href="" class="tool-trigger"><i class="fa fa-camera-retro fa-lg"></i></a> 
+			</div>
+
+			<div class='map' id="map"></div>
+
+			<div class='results-container'>
+				<hr class="resize-handle-y" />
+				
+				<table class="data-table">
+					
+					<thead>
+						<tr>
+							<th>Column 1</th>
+							<th>Column 2</th>
+							<th>Column 3</th>
+							<th>Column 4</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Item 1</td>
+							<td>Item 1</td>
+							<td>Item 1</td>
+							<td>Item 1</td>
+						</tr>
+						<tr>
+							<td>Item 1</td>
+							<td>Item 1</td>
+							<td>Item 1</td>
+							<td>Item 1</td>
+						</tr>
+						<tr>
+							<td>Item 1</td>
+							<td>Item 1</td>
+							<td>Item 1</td>
+							<td>Item 1</td>
+						</tr>
+						<tr>
+							<td>Item 1</td>
+							<td>Item 1</td>
+							<td>Item 1</td>
+							<td>Item 1</td>
+						</tr>
+						<tr>
+							<td>Item 1</td>
+							<td>Item 1</td>
+							<td>Item 1</td>
+							<td>Item 1</td>
+						</tr>
+						<tr>
+							<td>Item 1</td>
+							<td>Item 1</td>
+							<td>Item 1</td>
+							<td>Item 1</td>
+						</tr>
+						<tr>
+							<td>Item 1</td>
+							<td>Item 1</td>
+							<td>Item 1</td>
+							<td>Item 1</td>
+						</tr>
+						<tr>
+							<td>Item 1</td>
+							<td>Item 1</td>
+							<td>Item 1</td>
+							<td>Item 1</td>
+						</tr>																		
+					</tbody>
+				</table>
+				
+			</div>
+			
+		</div>
+	</div> 
+	
+	<div class="footer-container">
+		
+		<div class="left">
+			
+		</div>
+		<div class="center">
+			Work in Progess.. 
+			<br />
+			For Support call....
+		</div>
+		<div class="right">
+			copyright FDOT 2015
+		</div>
+		
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="/bower_components/leaflet/dist/leaflet.js"></script>
+	<script src="/bower_components/angular/angular.js"></script>
+	
+	<script src="/js/query-attribute-filter.js"></script>
+	
+	<script>
+
+		$('.toolbar .tool-trigger').click(function(e) {
+			e.preventDefault();
+			$('.tool-surface').toggleClass('is-open');
+			$('.results-container').toggleClass('is-open');
+			$('.map').toggleClass('results-open');
+		});
+		
+		var map = L.map('map').setView([51.505, -0.09], 13);
+		
+		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+		
+		
+// 	var resizing = false;
+// 	var lastYPosition = 0;
+// 
+// 	$('.resize-handle-y').mousedown(function(e) {
+// 		resizing = true;
+// 		lastYPosition = e.clientY;
+// 	});
+// 	
+// 	$('.resize-handle-y').mouseup(function() {
+// 		resizing = false;
+// 	});
+// 	
+// 	$('.resize-handle-y').parent().parent().mousemove(function(e) {
+// 		if(resizing) {
+// 			var delta = lastYPosition - e.clientY;
+// 			lastYPosition = e.clientY;
+// 
+// 				var currentHeight = $('.resize-handle-y').parent().height();
+// 				var newHeight = currentHeight + delta;
+// 				
+// 				console.log(currentHeight, delta, newHeight);
+// 				
+// 				$('.resize-handle-y').parent().height(newHeight);
+// 		}
+// 	});
+
+
+	</script>
+	
+</body>
+</html>

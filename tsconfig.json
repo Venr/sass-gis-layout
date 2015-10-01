@@ -1,0 +1,11 @@
+{
+	"compilerOptions": {
+		"module": "umd",
+		"target": "es5"
+	},
+	"files": [
+		"./typings/angularjs/angular.d.ts",
+		"./typings/tsd.d.ts",
+		"./ts/query-attribute-filter.ts"
+	]
+}
